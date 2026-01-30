@@ -19,7 +19,7 @@ function User(){
 
   const fetchUsers=async()=>{
     try{
-      const response=await axios.get('http://localhost:5000/api/users');
+      const response=await axios.get('https://utpatti-smart-project-management-1kwp.onrender.com/api/users');
       setUsers(response.data);
     }catch(error){
       alert('Error fetching users');
@@ -29,7 +29,7 @@ function User(){
   const handleDeleteUser=async(id)=>{
     if(!window.confirm('Delete this user?'))return;
     try{
-      await axios.delete(`http://localhost:5000/api/users/${id}`);
+      await axios.delete(`https://utpatti-smart-project-management-1kwp.onrender.com/api/users/${id}`);
       fetchUsers();
     }catch(error){
       alert('Error deleting user');
@@ -43,7 +43,7 @@ function User(){
 
   const handleUpdateUser=async(id)=>{
     try{
-      await axios.put(`http://localhost:5000/api/users/${id}`,editForm);
+      await axios.put(`https://utpatti-smart-project-management-1kwp.onrender.com/api/users/${id}`,editForm);
       setEditingUser(null);
       fetchUsers();
     }catch(error){
