@@ -14,7 +14,7 @@ const User=()=>{
     useEffect(()=>{
         const fetchUsers=async()=>{
             try{
-                const res=await axios.get("http://localhost:5000/api/users");
+                const res=await axios.get("https://utpatti-smart-project-management-1kwp.onrender.com/api/users");
                 setUsers(res.data);
             }
             catch(err){
@@ -27,7 +27,7 @@ const User=()=>{
     const handleDeleteUser=async(userId)=>{
         if(window.confirm("Are you sure you want to delete this user?")){
             try{
-                await axios.delete(`http://localhost:5000/api/users/${userId}`);
+                await axios.delete(`https://utpatti-smart-project-management-1kwp.onrender.com/api/users/${userId}`);
                 setUsers(users.filter(user=>user._id!==userId));
                 console.log("User deleted successfully");
             }
@@ -44,7 +44,7 @@ const User=()=>{
 
     const handleUpdateUser=async(userId)=>{
         try{
-            await axios.put(`http://localhost:5000/api/users/${userId}`, editData);
+            await axios.put(`https://utpatti-smart-project-management-1kwp.onrender.com/api/users/${userId}`, editData);
             setUsers(users.map(user=>user._id===userId ? {...user, ...editData} : user));
             setEditingUserId(null);
             alert("User updated successfully");
