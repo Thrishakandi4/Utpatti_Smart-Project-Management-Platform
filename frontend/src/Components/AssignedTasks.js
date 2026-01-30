@@ -12,14 +12,14 @@ const [selectedTask,setSelectedTask]=useState(null);
 useEffect(()=>{
 const fetchUserAndTasks=async()=>{
 try{
-const userRes=await axios.get("http://localhost:5000/api/users");
+const userRes=await axios.get("https://utpatti-smart-project-management-1kwp.onrender.com/api/users");
 const user=userRes.data.find(u=>u._id===userId);
 if(!user){
 console.log("User not found");
 return;
 }
 setUserName(user.name);
-const tasksRes=await axios.get("http://localhost:5000/api/tasks");
+const tasksRes=await axios.get("https://utpatti-smart-project-management-1kwp.onrender.com/api/tasks");
 const userTasks=tasksRes.data.filter(task=>task.assignedto===user._id);
 const grouped={};
 phases.forEach(p=>grouped[p]=[]);
@@ -37,7 +37,7 @@ fetchUserAndTasks();
 
 const moveTask=async(taskId,newPhase)=>{
 try{
-await axios.put(`http://localhost:5000/api/tasks/${taskId}`,{status:newPhase});
+await axios.put(`https://utpatti-smart-project-management-1kwp.onrender.com/api/tasks/${taskId}`,{status:newPhase});
 const updated={...tasks};
 Object.keys(updated).forEach(phase=>{
 updated[phase]=updated[phase].filter(t=>t._id!==taskId);
