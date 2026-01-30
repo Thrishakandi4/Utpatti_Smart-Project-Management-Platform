@@ -23,12 +23,12 @@ function Admin(){
   const fetchStats=async()=>{
     try{
       const [tasks,users,backlog,inProgress,qa,done]=await Promise.all([
-        axios.get('http://localhost:5000/api/tasks/count'),
-        axios.get('http://localhost:5000/api/users/count'),
-        axios.get('http://localhost:5000/api/tasks/count/Backlog'),
-        axios.get('http://localhost:5000/api/tasks/inprogress/count'),
-        axios.get('http://localhost:5000/api/tasks/count/QA'),
-        axios.get('http://localhost:5000/api/tasks/done/count')
+        axios.get('https://utpatti-smart-project-management-1kwp.onrender.com/api/tasks/count'),
+        axios.get('https://utpatti-smart-project-management-1kwp.onrender.com/api/users/count'),
+        axios.get('https://utpatti-smart-project-management-1kwp.onrender.com/api/tasks/count/Backlog'),
+        axios.get('https://utpatti-smart-project-management-1kwp.onrender.com/api/tasks/inprogress/count'),
+        axios.get('https://utpatti-smart-project-management-1kwp.onrender.com/api/tasks/count/QA'),
+        axios.get('https://utpatti-smart-project-management-1kwp.onrender.com/api/tasks/done/count')
       ]);
       setStats({
         totalTasks:tasks.data.count,
