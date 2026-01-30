@@ -12,7 +12,7 @@ function AssignedTasks({userId}){
 
   const fetchTasks=async()=>{
     try{
-      const response=await axios.get(`http://localhost:5000/api/tasks?assignedTo=${userId}`);
+      const response=await axios.get(`https://utpatti-smart-project-management-1kwp.onrender.com/api/tasks?assignedTo=${userId}`);
       setTasks(response.data.filter(t=>t.assignedTo && t.assignedTo._id===userId));
     }catch(error){
       alert('Error fetching tasks');
@@ -21,7 +21,7 @@ function AssignedTasks({userId}){
 
   const moveTask=async(taskId,newPhase)=>{
     try{
-      await axios.put(`http://localhost:5000/api/tasks/${taskId}`,{phase:newPhase});
+      await axios.put(`https://utpatti-smart-project-management-1kwp.onrender.com/api/tasks/${taskId}`,{phase:newPhase});
       fetchTasks();
     }catch(error){
       alert('Error moving task');
