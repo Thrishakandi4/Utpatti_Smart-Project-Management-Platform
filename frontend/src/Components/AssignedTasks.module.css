@@ -1,0 +1,235 @@
+.container{
+    min-height:100vh;
+    background-color:#f5f5f5;
+}
+.nav{
+    background-color:#000;
+    border-radius:8px;
+    margin-bottom:20px;
+}
+.ulmain{
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    padding:20px 30px;
+    margin:0;
+    list-style:none;
+}
+.navItem{
+    list-style:none;
+}
+.backBtn{
+    padding:10px 20px;
+    background-color:white;
+    color:black;
+    border:none;
+    border-radius:5px;
+    cursor:pointer;
+    font-weight:bold;
+}
+.backBtn:hover{
+    background-color:#ddd;
+}
+.heading{
+    margin:0;
+    color:white;
+    font-size:24px;
+}
+.kanban{
+    padding:20px;
+}
+.board{
+    display:flex;
+    gap:20px;
+    overflow-x:auto;
+    padding:10px 0;
+}
+.column{
+    flex:1;
+    min-width:300px;
+    background-color:#e8e8e8;
+    border-radius:8px;
+    padding:15px;
+    box-shadow:0 2px 8px rgba(0,0,0,0.1);
+}
+.columnHeader{
+    background-color:#007bff;
+    color:white;
+    padding:12px;
+    border-radius:6px;
+    font-weight:bold;
+    text-align:center;
+    margin-bottom:15px;
+}
+.cardContainer{
+    min-height:200px;
+}
+.card{
+    background-color:white;
+    padding:15px;
+    border-radius:6px;
+    margin-bottom:12px;
+    box-shadow:0 1px 4px rgba(0,0,0,0.1);
+    border-left:4px solid #28a745;
+}
+.card h4{
+    margin:0 0 8px 0;
+    color:black;
+    font-size:16px;
+}
+.desc{
+    margin:8px 0;
+    font-size:12px;
+    color:#777;
+    line-height:1.4;
+}
+.actions{
+    display:flex;
+    gap:8px;
+    margin-top:10px;
+    flex-wrap:wrap;
+}
+.btnPrev,.btnNext,.btnEdit,.btnDelete{
+    padding:6px 10px;
+    font-size:12px;
+    border:none;
+    border-radius:4px;
+    cursor:pointer;
+    font-weight:bold;
+}
+.btnPrev{
+    background-color:#ff9800;
+    color:white;
+}
+.btnPrev:hover{
+    background-color:#e68900;
+}
+.btnNext{
+    background-color:#4caf50;
+    color:white;
+}
+.btnNext:hover{
+    background-color:#45a049;
+}
+.btnEdit{
+    background-color:#2196F3;
+    color:white;
+}
+.btnEdit:hover{
+    background-color:#0b7dda;
+}
+.btnDelete{
+    background-color:#d32f2f;
+    color:white;
+}
+.btnDelete:hover{
+    background-color:#c62828;
+}
+.emptyPlaceholder{
+    color:#aaa;
+    text-align:center;
+    padding:40px 10px;
+    font-size:14px;
+}
+.infoBtn{
+    background-color:#007bff;
+    color:white;
+    border:none;
+    padding:5px 10px;
+    border-radius:4px;
+    cursor:pointer;
+    font-size:11px;
+    margin:8px 0;
+}
+.infoBtn:hover{
+    background-color:#0056b3;
+}
+.modal{
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    background-color:rgba(0,0,0,0.7);
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    z-index:1000;
+}
+.modalContent{
+    background-color:white;
+    padding:30px;
+    border-radius:8px;
+    max-width:500px;
+    width:90%;
+    box-shadow:0 4px 16px rgba(0,0,0,0.3);
+}
+.modalContent h3{
+    margin:0 0 15px 0;
+    color:black;
+}
+.modalContent input,
+.modalContent textarea,
+.modalContent select{
+    width:100%;
+    padding:10px;
+    margin:10px 0;
+    border:2px solid #ccc;
+    border-radius:4px;
+    font-size:14px;
+    color:black;
+    box-sizing:border-box;
+}
+.modalContent input:focus,
+.modalContent textarea:focus,
+.modalContent select:focus{
+    outline:none;
+    border-color:black;
+    box-shadow:0 0 5px rgba(0,0,0,0.2);
+}
+.modalContent textarea{
+    resize:vertical;
+    min-height:80px;
+}margin-right:10px;
+    
+.modalContent p{
+    margin:10px 0;
+    color:#555;
+}
+.modalContent strong{
+    color:black;
+}
+.modalContent ul{
+    margin:5px 0;
+    padding-left:20px;
+}
+.modalContent li{
+    margin:3px 0;
+}
+.closeBtn{
+    background-color:black;
+    color:white;
+    border:none;
+    padding:10px 20px;
+    border-radius:5px;
+    cursor:pointer;
+    margin-top:15px;
+    font-weight:bold;
+}
+.closeBtn:hover{
+    background-color:#555;
+}
+.statusSelect:hover{
+    background-color:white;
+    border-color:black;
+}
+.statusSelect:focus{
+    outline:none;
+    border-color:black;
+    box-shadow:0 0 5px rgba(0,0,0,0.2);
+}
+.statusSelect option{
+    padding:8px;
+    background-color:#fff;
+    color:black;
+}

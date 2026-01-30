@@ -1,0 +1,152 @@
+.kanban{
+    padding:20px;
+    background-color:#f5f5f5;
+    min-height:100vh;
+}
+.header{
+    text-align:center;
+    margin-bottom:30px;
+}
+.header h2{
+    color:black;
+    font-size:28px;
+    margin:0;
+}
+.board{
+    display:flex;
+    gap:20px;
+    overflow-x:auto;
+    padding:10px 0;
+}
+.column{
+    flex:1;
+    min-width:300px;
+    background-color:white;
+    border-radius:8px;
+    padding:15px;
+}
+.columnHeader{
+    background-color:black;
+    color:white;
+    padding:12px;
+    border-radius:6px;
+    font-weight:bold;
+    text-align:center;
+    margin-bottom:15px;
+}
+.cardContainer{
+    min-height:200px;
+}
+.card{
+    background-color:white;
+    padding:15px;
+    border-radius:6px;
+    margin-bottom:12px;
+}
+.card h4{
+    margin:0 0 8px 0;
+    color:black;
+    font-size:16px;
+}
+.assigned{
+    margin:5px 0;
+    font-size:13px;
+    color:black;
+}
+.desc{
+    margin:8px 0;
+    font-size:12px;
+    color:#555;
+    line-height:1.4;
+}
+.actions{
+    display:flex;
+    gap:8px;
+    margin-top:10px;
+}
+.btnPrev,.btnNext{
+    padding:6px 10px;
+    font-size:12px;
+    border:none;
+    border-radius:4px;
+    cursor:pointer;
+    font-weight:bold;
+}
+.btnPrev{
+    background-color:#ff9800;
+    color:white;
+}
+.btnNext{
+    background-color:#4caf50;
+    color:white;
+}
+.emptyPlaceholder{
+    color:#aaa;
+    text-align:center;
+    padding:40px 10px;
+    font-size:14px;
+}
+.infoBtn{
+    background-color:#007bff;
+    color:white;
+    border:none;
+    padding:5px 10px;
+    border-radius:4px;
+    cursor:pointer;
+    font-size:11px;
+    margin:8px 0;
+}
+.infoBtn:hover{
+    background-color:#0056b3;
+}
+.modal{
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    background-color:rgba(0,0,0,0.7);
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    z-index:1000;
+}
+.modalContent{
+    background-color:white;
+    padding:30px;
+    border-radius:8px;
+    max-width:500px;
+    width:90%;
+    box-shadow:0 4px 16px rgba(0,0,0,0.3);
+}
+.modalContent h3{
+    margin:0 0 15px 0;
+    color:black;
+}
+.modalContent p{
+    margin:10px 0;
+    color:#555;
+}
+.modalContent strong{
+    color:black;
+}
+.modalContent ul{
+    margin:5px 0;
+    padding-left:20px;
+}
+.modalContent li{
+    margin:3px 0;
+}
+.closeBtn{
+    background-color:#333;
+    color:white;
+    border:none;
+    padding:10px 20px;
+    border-radius:5px;
+    cursor:pointer;
+    margin-top:15px;
+    font-weight:bold;
+}
+.closeBtn:hover{
+    background-color:#555;
+}

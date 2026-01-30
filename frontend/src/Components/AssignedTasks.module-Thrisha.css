@@ -1,0 +1,70 @@
+.container{
+  padding:2rem;
+}
+
+.container h2{
+  margin-bottom:1.5rem;
+  color:black;
+}
+
+.board{
+  display:grid;
+  grid-template-columns:repeat(4, 1fr);
+  gap:1rem;
+  overflow-x:auto;
+}
+
+.column{
+  background:white;
+  border-radius:8px;
+  min-width:250px;
+}
+
+.columnHeader{
+  background:black;
+  color:white;
+  padding:0.8rem;
+  text-align:center;
+  border-radius:8px 8px 0 0;
+  font-size:1rem;
+}
+
+.taskList{
+  padding:0.8rem;
+  min-height:200px;
+}
+
+.taskCard{
+  background:white;
+  padding:0.8rem;
+  margin-bottom:0.8rem;
+  border-radius:5px;
+  box-shadow:0 2px 5px rgba(0,0,0,0.1);
+}
+
+.taskCard h4{
+  margin-bottom:0.5rem;
+  font-size:1rem;
+}
+
+.taskCard p{
+  font-size:0.85rem;
+  color:black;
+  margin-bottom:0.5rem;
+}
+
+.taskActions{
+  display:flex;
+  gap:0.5rem;
+  margin-top:0.5rem;
+}
+
+.taskActions button{
+  padding:0.3rem 0.8rem;
+  border:none;
+  background:black;
+  color:white;
+  border-radius:3px;
+  cursor:pointer;
+  font-size:0.85rem;
+}
