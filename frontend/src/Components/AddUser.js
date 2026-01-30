@@ -8,7 +8,7 @@ function AddUser({onClose}){
     const handleSubmit=async(e)=>{
         e.preventDefault();
         try{
-            await axios.post('http://localhost:5000/api/users',form);
+            await axios.post('https://utpatti-smart-project-management-1kwp.onrender.com/api/users',form);
             alert('User created successfully!');
             onClose();
         }catch(error){
