@@ -9,7 +9,8 @@ function AddTask({onClose}){
     useEffect(()=>{
         const fetchUsers=async()=>{
             try{
-                const res=await axios.get('http://localhost:5000/api/users');
+                 
+                const res=await axios.get('https://utpatti-smart-project-management-1kwp.onrender.com/api/users');
                 setUsers(res.data);
                 if(res.data.length>0){
                     setForm(prev=>({...prev,assignedto:res.data[0]._id}));
@@ -24,7 +25,7 @@ function AddTask({onClose}){
     const handleSubmit=async(e)=>{
         e.preventDefault();
         try{
-            await axios.post('http://localhost:5000/api/tasks',{
+            await axios.post('https://utpatti-smart-project-management-1kwp.onrender.com/api/tasks',{
                 title:form.title,
                 description:form.description,
                 status:form.status,
