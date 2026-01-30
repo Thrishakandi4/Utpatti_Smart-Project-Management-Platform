@@ -10,8 +10,8 @@ useEffect(()=>{
 const fetchData=async()=>{
 try{
 const [tasksRes,usersRes]=await Promise.all([
-axios.get("http://localhost:5000/api/tasks"),
-axios.get("http://localhost:5000/api/users")
+axios.get("https://utpatti-smart-project-management-1kwp.onrender.com/api/tasks"),
+axios.get("https://utpatti-smart-project-management-1kwp.onrender.com/api/users")
 ]);
 setUsers(usersRes.data);
 const grouped={};
