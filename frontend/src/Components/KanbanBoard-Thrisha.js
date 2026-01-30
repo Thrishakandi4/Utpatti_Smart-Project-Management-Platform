@@ -15,7 +15,7 @@ function KanbanBoard(){
 
   const fetchTasks=async()=>{
     try{
-      const response=await axios.get('http://localhost:5000/api/tasks');
+      const response=await axios.get('https://utpatti-smart-project-management-1kwp.onrender.com/api/tasks');
       setTasks(response.data);
     }catch(error){
       alert('Error fetching tasks');
@@ -24,7 +24,7 @@ function KanbanBoard(){
 
   const moveTask=async(taskId,newPhase)=>{
     try{
-      await axios.put(`http://localhost:5000/api/tasks/${taskId}`,{phase:newPhase});
+      await axios.put(`https://utpatti-smart-project-management-1kwp.onrender.com/api/tasks/${taskId}`,{phase:newPhase});
       fetchTasks();
     }catch(error){
       alert('Error moving task');
