@@ -4,17 +4,17 @@ Task management system using MERN stack. Kanban board for managing tasks through
 
 ## Links
 
-- Live Demo: [Add your deployment link here]
-- GitHub: [Add your repository link here]
+- Live Demo: https://utpatti-smart-project-management.onrender.com/
+- GitHub: https://github.com/Thrishakandi4/Utpatti_Smart-Project-Management-Platform
 
 ## What is it
 
 A task management app where you can:
-- Create users and assign tasks to them
-- Move tasks through 4 phases (Backlog, In Progress, QA, Done)
-- See task history
-- Admin can view all tasks
-- Users can see only their assigned tasks
+ Create users and assign tasks to them
+ Move tasks through 4 phases (Backlog, In Progress, QA, Done)
+ See task history
+ Admin can view all tasks
+ Users can see only their assigned tasks
 
 ## Tech Used
 
@@ -32,7 +32,7 @@ npm install
 Make .env file:
 ```
 db_uri=mongodb://localhost:27017/utpatti
-PORT=3000
+PORT=5000
 ```
 
 Run:
@@ -50,19 +50,38 @@ npm start
 ## API
 
 Users:
-- POST /adduser - add user
-- GET /getusers - get all users
-- GET /countusers - count users
-- PUT /updateuser/:userId - update
-- DELETE /deleteuser/:userId - delete
+ POST /adduser - add user
+ GET /getusers - get all users
+ GET /countusers - count users
+ PUT /updateuser/:userId - update
+ DELETE /deleteuser/:userId - delete
+
+Users (API routes used by frontend):
+ POST /api/users - add user
+ GET /api/users - get all users
+ GET /api/users/count - count users
+ PUT /api/users/:userId - update
+ DELETE /api/users/:userId - delete
 
 Tasks:
-- POST /addtask - create task
-- GET /gettasks - get all tasks
-- GET /tasks - count tasks
-- GET /inprogress - in progress count
-- GET /donetasks - done count
-- PUT /updatetask/:taskId - update task
+ POST /addtask - create task
+ GET /gettasks - get all tasks
+ GET /tasks - count tasks
+ GET /inprogress - in progress count
+ GET /donetasks - done count
+ PUT /updatetask/:taskId - update task
+ DELETE /deletetask/:taskId - delete task
+
+Tasks (API routes used by frontend):
+ POST /api/tasks - create task
+ GET /api/tasks - get all tasks
+ GET /api/tasks/count - count tasks
+ GET /api/tasks/inprogress/count - in progress count
+ GET /api/tasks/done/count - done count
+ GET /api/tasks/count/Backlog - backlog count
+ GET /api/tasks/count/QA - QA count
+ PUT /api/tasks/:taskId - update task
+ DELETE /api/tasks/:taskId - delete task
 
 ## Database
 
